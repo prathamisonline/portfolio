@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useMotionValue, motion, useMotionTemplate } from "motion/react";
+import { motion, useMotionTemplate } from "motion/react";
 import React from "react";
 
 export const HeroHighlight = ({
@@ -12,8 +12,8 @@ export const HeroHighlight = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+  // let mouseX = useMotionValue(0);
+  // let mouseY = useMotionValue(0);
 
   // SVG patterns for different states and themes
   const dotPatterns = {
@@ -29,14 +29,14 @@ export const HeroHighlight = ({
 
   function handleMouseMove({
     currentTarget,
-    clientX,
-    clientY,
+    // clientX,
+    // clientY,
   }: React.MouseEvent<HTMLDivElement>) {
     if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
+    // let { left, top } = currentTarget.getBoundingClientRect();
 
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
+    // mouseX.set(clientX - left);
+    // mouseY.set(clientY - top);
   }
   return (
     <div
@@ -64,14 +64,14 @@ export const HeroHighlight = ({
           backgroundImage: dotPatterns.light.hover,
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
-              200px circle at ${mouseX}px ${mouseY}px,
+              200px circle at 10px 10px,
               black 0%,
               transparent 100%
             )
           `,
           maskImage: useMotionTemplate`
             radial-gradient(
-              200px circle at ${mouseX}px ${mouseY}px,
+              200px circle at 10px 10px,
               black 0%,
               transparent 100%
             )
@@ -84,14 +84,14 @@ export const HeroHighlight = ({
           backgroundImage: dotPatterns.dark.hover,
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
-              200px circle at ${mouseX}px ${mouseY}px,
+              200px circle at 10px 10px ,
               black 0%,
               transparent 100%
             )
           `,
           maskImage: useMotionTemplate`
             radial-gradient(
-              200px circle at ${mouseX}px ${mouseY}px,
+              200px circle at ,
               black 0%,
               transparent 100%
             )
