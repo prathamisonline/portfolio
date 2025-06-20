@@ -1,13 +1,10 @@
 "use client";
-import { motion, useMotionTemplate, useMotionValue } from "motion/react";
+import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import {
   // HeroHighlight,
   Highlight,
 } from "../ui/hero-highlight";
 import { useEffect } from "react";
-import { animate } from "motion";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 
 export function Hero() {
   const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
@@ -46,7 +43,7 @@ export function Hero() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight sm:leading-tight md:leading-tight lg:leading-tight mb-6">
-            Hi! I'm Pratham
+            Hi! I&apos;m Pratham
           </h1>
           
           <motion.p 
