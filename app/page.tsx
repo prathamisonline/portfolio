@@ -2,8 +2,8 @@ import Home from "@/components/home/home";
 
 export default function page() {
   return (
-    <div className="mt-8 min-h-screen">
-    <Home/>
+    <div className=" min-h-screen bg-[#020617]">
+      <Home />
     </div>
   );
 }
